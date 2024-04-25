@@ -1,0 +1,21 @@
+[2024-04-25T21:49:05.284+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Creating_database.Testing_database_creation manual__2024-04-25T21:46:15.857002+00:00 [queued]>
+[2024-04-25T21:49:05.321+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Creating_database.Testing_database_creation manual__2024-04-25T21:46:15.857002+00:00 [queued]>
+[2024-04-25T21:49:05.322+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-04-25T21:49:06.075+0000] {taskinstance.py:2192} INFO - Executing <Task(BashOperator): Testing_database_creation> on 2024-04-25 21:46:15.857002+00:00
+[2024-04-25T21:49:06.670+0000] {standard_task_runner.py:60} INFO - Started process 108 to run task
+[2024-04-25T21:49:06.878+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'Creating_database', 'Testing_database_creation', 'manual__2024-04-25T21:46:15.857002+00:00', '--job-id', '93', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpcr8cc0p8']
+[2024-04-25T21:49:07.029+0000] {standard_task_runner.py:88} INFO - Job 93: Subtask Testing_database_creation
+[2024-04-25T21:49:07.704+0000] {task_command.py:423} INFO - Running <TaskInstance: Creating_database.Testing_database_creation manual__2024-04-25T21:46:15.857002+00:00 [running]> on host 96e84e3816be
+[2024-04-25T21:49:11.699+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='Creating_database' AIRFLOW_CTX_TASK_ID='Testing_database_creation' AIRFLOW_CTX_EXECUTION_DATE='2024-04-25T21:46:15.857002+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-25T21:46:15.857002+00:00'
+[2024-04-25T21:49:11.701+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-04-25T21:49:11.712+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/airflow/dags/Scripts/Testing_database_creation.py']
+[2024-04-25T21:49:12.144+0000] {subprocess.py:86} INFO - Output:
+[2024-04-25T21:50:26.661+0000] {subprocess.py:93} INFO - .
+[2024-04-25T21:50:26.674+0000] {subprocess.py:93} INFO - ----------------------------------------------------------------------
+[2024-04-25T21:50:26.676+0000] {subprocess.py:93} INFO - Ran 1 test in 66.212s
+[2024-04-25T21:50:26.678+0000] {subprocess.py:93} INFO - 
+[2024-04-25T21:50:26.679+0000] {subprocess.py:93} INFO - OK
+[2024-04-25T21:50:27.217+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-04-25T21:50:27.907+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Creating_database, task_id=Testing_database_creation, execution_date=20240425T214615, start_date=20240425T214905, end_date=20240425T215027
+[2024-04-25T21:50:29.201+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-25T21:50:29.343+0000] {taskinstance.py:3281} INFO - 1 downstream tasks scheduled from follow-on schedule check

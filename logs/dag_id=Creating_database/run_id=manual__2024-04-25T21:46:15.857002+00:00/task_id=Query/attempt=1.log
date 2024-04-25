@@ -1,0 +1,16 @@
+[2024-04-25T21:54:23.951+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Creating_database.Query manual__2024-04-25T21:46:15.857002+00:00 [queued]>
+[2024-04-25T21:54:23.980+0000] {taskinstance.py:1957} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Creating_database.Query manual__2024-04-25T21:46:15.857002+00:00 [queued]>
+[2024-04-25T21:54:23.981+0000] {taskinstance.py:2171} INFO - Starting attempt 1 of 1
+[2024-04-25T21:54:24.135+0000] {taskinstance.py:2192} INFO - Executing <Task(BashOperator): Query> on 2024-04-25 21:46:15.857002+00:00
+[2024-04-25T21:54:24.159+0000] {standard_task_runner.py:60} INFO - Started process 202 to run task
+[2024-04-25T21:54:24.180+0000] {standard_task_runner.py:87} INFO - Running: ['airflow', 'tasks', 'run', 'Creating_database', 'Query', 'manual__2024-04-25T21:46:15.857002+00:00', '--job-id', '96', '--raw', '--subdir', 'DAGS_FOLDER/dag.py', '--cfg-path', '/tmp/tmpxabg2_6y']
+[2024-04-25T21:54:24.193+0000] {standard_task_runner.py:88} INFO - Job 96: Subtask Query
+[2024-04-25T21:54:24.413+0000] {task_command.py:423} INFO - Running <TaskInstance: Creating_database.Query manual__2024-04-25T21:46:15.857002+00:00 [running]> on host 96e84e3816be
+[2024-04-25T21:54:25.472+0000] {taskinstance.py:2481} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='Creating_database' AIRFLOW_CTX_TASK_ID='Query' AIRFLOW_CTX_EXECUTION_DATE='2024-04-25T21:46:15.857002+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-04-25T21:46:15.857002+00:00'
+[2024-04-25T21:54:25.479+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-04-25T21:54:25.481+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python3 /opt/airflow/dags/Scripts/Queries.py']
+[2024-04-25T21:54:25.509+0000] {subprocess.py:86} INFO - Output:
+[2024-04-25T21:54:39.422+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-04-25T21:54:39.844+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=Creating_database, task_id=Query, execution_date=20240425T214615, start_date=20240425T215423, end_date=20240425T215439
+[2024-04-25T21:54:40.660+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-04-25T21:54:40.781+0000] {taskinstance.py:3281} INFO - 0 downstream tasks scheduled from follow-on schedule check
